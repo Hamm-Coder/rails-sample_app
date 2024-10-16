@@ -5,10 +5,9 @@
 <p><%= @list.body %></p>
 
 <h2>画像</h2>
-  <% if @list.image.attached? %>
-    <%= image_tag @list.image, size: "200x200" %>
-  <% else %>
-    <%= image_tag 'no_image', size: "200x200" %>
-  <% end %>
+
+<!--以下を追加-->
+<%= image_tag @list.image, size: "300x300" %>
 
 <%= link_to "編集", edit_list_path(@list.id) %>
+<%= link_to "削除", list_path(@list.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
