@@ -18,7 +18,7 @@ class ListsController < ApplicationController
     #4-2 指定アクション名で同一コントローラー内の別アクションのviewを表示する。
       flash.now[:alert] = "投稿に失敗しました。" #キーをalertに変更
       render :new
-
+      
     end
   end
 
